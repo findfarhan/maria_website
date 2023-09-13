@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   );
 });
 
-const PORT = 8003;
+const PORT = 3002;
 app.listen(PORT, () => {
   console.log(`Application is listing on port ${PORT}`);
 });
