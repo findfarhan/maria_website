@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   );
 });
 
-const port = 8000;
-app.listen(port, () => {
-  console.log('application is listing a port 8000');
+const PORT = 8003;
+app.listen(PORT, () => {
+  console.log(`Application is listing a port ${PORT}`);
 });
