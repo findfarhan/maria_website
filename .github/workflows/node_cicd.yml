@@ -11,12 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm i
-      - run: |
-          if pm2 show index.js ; then
-               echo "Process is not running, starting..."
-            pm2 start index.js
-          else
-          echo "Process is already running, restarting..."
-            pm2 restart index
 
+      # Check if the process exists; if yes, restart it, otherwise start it
+      - run: |
+          if pm2 list | grep -q 'index'; then
+            pm2 restart index
+          else
+            pm2 start index.js
           fi
