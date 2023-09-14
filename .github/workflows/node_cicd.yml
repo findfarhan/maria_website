@@ -2,7 +2,7 @@ name: CI-CD_practice
 
 on:
   push:
-    branch: [main]
+    branch: [development_branch]
 
 jobs:
   build:
