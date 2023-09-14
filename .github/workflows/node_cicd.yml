@@ -14,7 +14,7 @@ jobs:
       - run: |
           if pm2 show index.js ; then
             echo "Process is already running, restarting..."
-            pm2 restart index.js
+            pm2 restart index
           else
             echo "Process is not running, starting..."
             pm2 start index.js
