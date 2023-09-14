@@ -1,0 +1,14 @@
+name: CI-CD_practice
+
+on:
+  push:
+    branch: [main]
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm i
+      - run: pm2 start index.js
