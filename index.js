@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
     <title>Document</title>
   </head>
   <body>
-    <h2>Hello World 1</h2>
-    <p>The four different types of paragraphs are descriptive, narrative, expository, and persuasive. These four types allow you to write about absolutely anything that you want! By understanding these different types of paragraphs and what they are used for, the English world is your oyster.</p>
+    <h2>Hello World 2</h2>
+    <p>The four different types of paragraphs are descriptive, narrative, expository, and persuasive. These four types allow you to write </p>
   </body>
 </html>`
   );
