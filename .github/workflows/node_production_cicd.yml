@@ -2,7 +2,7 @@ name: Production_CI/CD
 
 on:
   push:
-    branch: [production_branch]
+    branch: [main]
 
 jobs:
   build:
