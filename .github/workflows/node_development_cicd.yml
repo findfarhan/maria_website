@@ -1,4 +1,4 @@
-name: CI-CD_practice
+name: Development_CI/CD
 
 on:
   push:
