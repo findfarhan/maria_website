@@ -13,9 +13,10 @@ jobs:
       - run: npm i
       - run: |
           if pm2 show index.js ; then
-            echo "Process is already running, restarting..."
-            pm2 restart index
-          else
-            echo "Process is not running, starting..."
+               echo "Process is not running, starting..."
             pm2 start index.js
+          else
+          echo "Process is already running, restarting..."
+            pm2 restart index
+
           fi
