@@ -1,8 +1,8 @@
-name: Development_CI/CD
+name: CI-CD_practice
 
 on:
   push:
-    branch: [development_branch]
+    branch: [main]
 
 jobs:
   build:
