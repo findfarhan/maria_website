@@ -1,14 +1,14 @@
 import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 
 app.get('/', (req, res) => {
   res.send(
     `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <html>
+  <head>  
     <title>Document</title>
   </head>
   <body>
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   );
 });
 
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
-  console.log(`Application is listing on port ${PORT}`);
+  console.log(`Application is listening on port ${PORT}`);
 });
