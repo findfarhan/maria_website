@@ -9,11 +9,11 @@ app.get('/', (req, res) => {
     `<!DOCTYPE html>
   <html>
   <head>  
-    <title>Document</title>
+    <title>react app</title>
   </head>
   <body>
-    <h2>Development Branch</h2>
-    <p>This is my development branch</p>
+    <h2>Main Branch</h2>
+    <p>This is my main branch</p>
   </body>
 </html>`
   );
