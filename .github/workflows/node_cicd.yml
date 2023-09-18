@@ -4,9 +4,6 @@ on:
   push:
     branch: [main]name: Production CI
 
-on:
-  push:
-    branches: [ master ]
 
 jobs:
   build:
