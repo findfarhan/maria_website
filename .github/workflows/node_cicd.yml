@@ -2,13 +2,13 @@ name: CI-CD_practice
 
 on:
   push:
-    branch: [main]name: Production CI
+    branch: [main]
 
 
 jobs:
   build:
     
-    runs-on: [self-hosted, production]
+    runs-on: [self-hosted]
 
     strategy:
       matrix:
@@ -22,14 +22,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm i
     - name: build project
-    - run: npm run build
+      run: npm run build
     - name: Copy the project to production directory
-      run: cp -R -f /home/ubuntu/actions-runner/_work/maria_website/maria_website/build/* /var/www/html/ 
-    - run: |
-          if pm2 list | grep -q 'index'; then
-            pm2 restart index
-          else
-            pm2 start index.js
-          fi
-
-    
+      run: cp -R -f /home/ubuntu/actions-runner/_work/maria_website/maria_website/build/* /var/www/html/
